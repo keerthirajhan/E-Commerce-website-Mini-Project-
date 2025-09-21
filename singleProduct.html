@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rymo.com Product Page</title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .small-img-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .small-img-col {
+        flex-basis: 24%;
+        cursor: pointer;
+    }
+
+    .sproduct select {
+      display: block;
+      padding: 5px 10px;
+    }
+
+    .sproduct input {
+      width: 50px;
+      height: 40px;
+      padding-left: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .sproduct input:focus {
+      outline: none;
+    }
+
+    .buy-btn {
+      background-color: coral;
+      opacity: 1;
+      transition: 0.3s all;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+    <div class="container">
+      <img src="img/logo1.png" alt="nav logo1" style="height:40px;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="bar"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#">About</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="nav-link" href="#"><i class="fa-solid fa-shopping-bag"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Product Details-->
+
+  <section class="container sproduct my-5 pt-5">
+    <div class="row mt-5">
+        <div class="col-lg-5 col-md-12 col-12">
+            <img class="img-fluid w-100 pb-1" src="/img/shop/1.jpg" id="MainImg" alt="">
+
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="img/shop/1.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/shop/24.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/shop/25.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="img/shop/26.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12">
+          <h6>Home / Tees</h6>
+          <h3 class="py-2.5">Mens Fashion Tees </h3>
+          <h2>Rs. 299.00</h2>
+          <select class="my-3">
+            <option>Select Size</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+          <input type="number" value="1">
+          <button class="buy-btn">Add To Cart</button>
+          <h4 class="mt-3 mb-3">Product Details</h4>
+          <span>Men’s tees made from high-quality, breathable cotton blend. Soft on the skin, lightweight, and durable for everyday wear.
+             Designed with a modern fit, it pairs effortlessly with jeans or shorts.
+              Perfect for casual outings, workouts, or lounging in comfort and style.</span>
+        </div>
+    </div>
+  </section>
+
+  <!--Featured Section-->
+  <section id="Featured" class="my-5 pb-5">
+    <div class="container text-center mt-5 py-5">
+      <h3>Customers who viewed this item also viewed.</h3>
+      <hr class="mx-auto">
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/featured/1.jpg" alt="">
+          <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+          </div>
+          <h5 class="p-name">Sports Shoes</h5>
+          <h4 class="p-price">Rs. 292.00</h4>
+          <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/featured/2.jpg" alt="">
+          <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+          </div>
+          <h5 class="p-name">Walking Shoes</h5>
+          <h4 class="p-price">Rs. 162.00</h4>
+          <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/featured/3.jpg" alt="">
+          <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+          </div>
+          <h5 class="p-name">backpack</h5>
+          <h4 class="p-price">Rs. 499.00</h4>
+          <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="/img/featured/4.jpg" alt="">
+          <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+          </div>
+          <h5 class="p-name">Skull Cap</h5>
+          <h4 class="p-price">Rs. 92.00</h4>
+          <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Footer Section-->
+  <footer class="mt-5 py-5">
+    <div class="row container mx-auto pt-5">
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <img src="/img/logo2.png" alt="">
+        <p class="pt-3">Rymo offers stylish, affordable fashion with quality and comfort,
+           blending youthful energy and trendy designs in clothing, footwear, and accessories.</p>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Featured</h5>
+        <ul class="text-uppercase list-unstyled">
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Clothes</a></li>
+        </ul>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Contact Us</h5>
+          <div>
+            <h6 class="text-uppercase">Address</h6>
+            <p>R.S.Puram,CBE,India</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">Phone</h6>
+            <p>0422 2348956</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">Email</h6>
+            <p>reach_us@rymo.com</p>
+          </div>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <h5 class="pb-2">Instagram</h5>
+          <div class="row">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/1.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/2.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/3.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/4.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/5.jpg" alt="">
+          </div>
+      </div>
+    </div>
+    <div class="copyright mt-5">
+      <div class="row container mx-auto">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <img src="img/payment.png" alt="">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+          <p>rymo eCommerce © 2025. All rights reserved</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Bootstrap 4 JS + Popper -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script>
+    var MainImg=document.getElementById('MainImg');
+    var smallImg=document.getElementsByClassName('small-img');
+
+    smallImg[0].onclick=function() {
+        MainImg.src=smallImg[0].src;
+    }
+    smallImg[1].onclick=function() {
+        MainImg.src=smallImg[1].src;
+    }
+    smallImg[2].onclick=function() {
+        MainImg.src=smallImg[2].src;
+    }
+    smallImg[3].onclick=function() {
+        MainImg.src=smallImg[3].src;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+  background: url("/BG_Login_6.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15); /* Glass effect */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+input.form-control {
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+}
+
+input.form-control:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.7);
+}
+
+button.btn {
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+button.btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}

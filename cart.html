@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rymo.com Home Page</title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+    <div class="container">
+      <img src="img/logo1.png" alt="nav logo1" style="height:40px;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span id="bar"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#">About</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+          <li class="nav-item d-flex align-items-center">
+            <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a class="nav-link active" href="cart.html"><i class="fa-solid fa-shopping-bag"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Cart Section-->
+  <section id="blog-home" class="pt-5 mt-5 container">
+        <h2 class="font-weight-bold pt-5" >Shopping Cart</h2>
+        <hr>
+  </section>
+
+  <section id="cart-container" class="container my-5">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+          <tbody id="cart-items"></tbody>
+    </table>
+  </section>
+
+  <section id="cart-bottom" class="container">
+    <div class="row">
+      <div class="coupon col-lg-6 col-md-6 col-12 mb-4">
+        <div>
+          <h5>COUPON</h5>
+          <p>Enter your Coupon code if you have one.</p>
+          <input type="text" placeholder="Coupon Code">
+          <button>APPLY COUPON</button>
+        </div>
+      </div>
+      <div class="Total col-lg-6 col-md-6 col-12">
+        <div>
+          <h5>Cart Total</h5>
+          <div class="d-flex justify-content-between">
+            <h6>Sub Total</h6>
+            <p id="sub-total">Rs. 0</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <h6>Shipping</h6>
+            <p id="shipping">Rs. 150</p>
+          </div>
+            <hr class="second-hr">
+          <div class="d-flex justify-content-between">
+            <h6>Total</h6>
+            <p id="grand-total">Rs. 0</p>
+          </div>
+          <button id="checkout-btn" class="ml-auto">Proceed to checkout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Footer Section-->
+  <footer class="mt-5 py-5">
+    <div class="row container mx-auto pt-5">
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <img src="/img/logo2.png" alt="">
+        <p class="pt-3">Rymo offers stylish, affordable fashion with quality and comfort,
+           blending youthful energy and trendy designs in clothing, footwear, and accessories.</p>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Featured</h5>
+        <ul class="text-uppercase list-unstyled">
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Clothes</a></li>
+        </ul>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+        <h5 class="pb-2">Contact Us</h5>
+          <div>
+            <h6 class="text-uppercase">Address</h6>
+            <p>R.S.Puram,CBE,India</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">Phone</h6>
+            <p>0422 2348956</p>
+          </div>
+          <div>
+            <h6 class="text-uppercase">Email</h6>
+            <p>reach_us@rymo.com</p>
+          </div>
+      </div>
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <h5 class="pb-2">Instagram</h5>
+          <div class="row">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/1.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/2.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/3.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/4.jpg" alt="">
+            <img class="img-fluid w-25 h-100 m-2" src="/img/insta/5.jpg" alt="">
+          </div>
+      </div>
+    </div>
+    <div class="copyright mt-5">
+      <div class="row container mx-auto">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <img src="img/payment.png" alt="">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+          <p>rymo eCommerce © 2025. All rights reserved</p>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 4 JS + Popper -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

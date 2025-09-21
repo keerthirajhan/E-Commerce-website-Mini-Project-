@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+<div class="card p-4 shadow" style="width: 350px;">
+  <h3 class="text-center mb-3">User Login</h3>
+
+  <!-- Registration -->
+  <div id="registerBox">
+    <input type="email" id="regEmail" class="form-control mb-2" placeholder="Enter Email">
+    <input type="password" id="regPassword" class="form-control mb-2" placeholder="Enter Password">
+    <button class="btn btn-success w-100" onclick="registerUser()">Register</button>
+    <p class="text-center mt-2">Already registered? <a href="#" onclick="showLogin()">Login</a></p>
+  </div>
+
+  <!-- Login -->
+  <div id="loginBox" style="display:none;">
+    <input type="email" id="loginEmail" class="form-control mb-2" placeholder="Enter Email">
+    <input type="password" id="loginPassword" class="form-control mb-2" placeholder="Enter Password">
+    <button class="btn btn-primary w-100" onclick="loginUser(event)">Login</button>
+    <p class="text-center mt-2">New user? <a href="#" onclick="showRegister()">Register</a></p>
+  </div>
+</div>
+
+<script src="Login.js"></script>
+</body>
+</html>
