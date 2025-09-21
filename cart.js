@@ -1,9 +1,25 @@
-// Load cart from localStorage
+// ---------------------- LOAD CART ----------------------
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // ---------------------- HELPER ----------------------
 function formatPrice(value) {
   return "Rs. " + value.toLocaleString("en-IN"); // Indian numbering format
+}
+
+// ---------------------- CART COUNT BADGE ----------------------
+function updateCartCount() {
+  const cartCountEl = document.getElementById("cart-count");
+  if (cartCountEl) {
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    if (totalItems > 0) {
+      cartCountEl.innerText = totalItems;
+      cartCountEl.style.display = "inline-block";
+    } else {
+      cartCountEl.innerText = "0";
+      cartCountEl.style.display = "none"; // hide badge if empty
+    }
+  }
 }
 
 // ---------------------- ADD TO CART (shop.html) ----------------------
@@ -16,6 +32,7 @@ function addToCart(product) {
   }
   localStorage.setItem("cart", JSON.stringify(cart));
   alert(product.name + " added to cart!");
+  updateCartCount(); // ✅ update badge
 }
 
 // Attach event listeners only on shop.html
@@ -41,7 +58,10 @@ if (window.location.pathname.includes("shop.html")) {
 // ---------------------- RENDER CART (cart.html) ----------------------
 function renderCart() {
   const cartTable = document.getElementById("cart-items");
-  if (!cartTable) return; // only run on cart.html
+  if (!cartTable) {
+    updateCartCount(); // still update badge outside cart page
+    return;
+  }
 
   cartTable.innerHTML = "";
   let subTotal = 0;
@@ -76,6 +96,8 @@ function renderCart() {
   if (subTotalEl) subTotalEl.innerText = formatPrice(subTotal);
   if (shippingEl) shippingEl.innerText = formatPrice(shipping);
   if (grandTotalEl) grandTotalEl.innerText = formatPrice(grandTotal);
+
+  updateCartCount(); // ✅ update badge
 }
 
 // ---------------------- UPDATE / REMOVE ----------------------
@@ -83,16 +105,19 @@ function updateQuantity(index, qty) {
   cart[index].quantity = parseInt(qty, 10);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
+  updateCartCount();
 }
 
 function removeItem(index) {
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
+  updateCartCount();
 }
 
 // ---------------------- INITIALIZE ----------------------
 renderCart();
+updateCartCount(); // ✅ initialize badge on page load
 
 // ---------------------- CHECKOUT ----------------------
 const checkoutBtn = document.getElementById("checkout-btn");
@@ -110,5 +135,6 @@ if (checkoutBtn) {
     cart = [];
     localStorage.removeItem("cart");
     renderCart();
+    updateCartCount();
   });
 }
